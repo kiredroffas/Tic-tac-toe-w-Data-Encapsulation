@@ -9,7 +9,7 @@ public class Grid {
     this.n = n;
     newGrid = new int[n][n];
 
-    for(int rows = 0; rows < n; rows++) {
+    for(int rows = 0; rows < n; rows++) {  //Empty is represented by all 0's
       for(int columns = 0; columns < n; columns++) {
         newGrid[rows][columns] = 0;
       }

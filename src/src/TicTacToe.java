@@ -4,9 +4,10 @@ public class TicTacToe extends GridGame {
   Grid g;
 
   public TicTacToe() {   //Constructor
-    g = new Grid(3);
+    g = new Grid(3);  //Make 3 x 3 grid for tic-tac-toe
   }
 
+  //Check if game is in progress (0), user has won (1), comp has won (2), or game is a tie (3)
   public int getStatus() {
     // 0 1 2      //012 345 678
     // 3 4 5      //036 147 258
@@ -77,17 +78,20 @@ public class TicTacToe extends GridGame {
     else if(g.getCell(0,2) == 2 && g.getCell(1,1) == 2 && g.getCell(2,0) == 2) {
       winStatus = 2;
     }
+    //Tie
     else if(g.getCell(0, 0) != 0 && g.getCell(0, 1) != 0 && g.getCell(0, 2) != 0 &&
         g.getCell(1, 0) != 0 && g.getCell(1, 1) != 0 && g.getCell(1, 2) != 0 &&
         g.getCell(2, 0) != 0 && g.getCell(2, 1) != 0 && g.getCell(2, 2) != 0 ) {
       winStatus = 3;
     }
+    //Game in progress
     else {
       winStatus = 0;
     }
     return(winStatus);
   }
 
+  //Attempt to place a mark at a specified spot in the grid
   public Boolean placeMark(int row, int col, int player) {
     int cellVal;
     if(player == 1) {
@@ -95,11 +99,11 @@ public class TicTacToe extends GridGame {
         return(false);
       }
       cellVal = g.getCell(row, col);
-      if(cellVal != 0) {
+      if(cellVal != 0) {  //If the space is already taken
         System.out.println("Space is already taken!");
         return(false);
       }
-      else {
+      else {  //Else we can enter the value into the grid
         g.setCell(row, col, 1);
         System.out.println("Set coordinate [" + row + ", " + col + "] as " + 1);
         return (true);
@@ -126,6 +130,7 @@ public class TicTacToe extends GridGame {
     }
   }
 
+  //Place a mark for the specified player, computer or user can utilize
   public void placeMark(int player) {
     while(true) {
       Random rand = new Random();
@@ -140,6 +145,7 @@ public class TicTacToe extends GridGame {
     }
   }
 
+  //Print the tic-tac-toe board
   public void printGrid() {
     for(int i = 0; i < 3; i++) {
       for(int j = 0; j < 3; j++) {
@@ -149,6 +155,7 @@ public class TicTacToe extends GridGame {
     }
   }
 
+  //Clear the board to start a new game
   public void restart() {
     g.clear();
   }
