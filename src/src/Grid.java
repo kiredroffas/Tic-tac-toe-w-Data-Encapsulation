@@ -11,7 +11,7 @@ public class Grid {
 
     for(int rows = 0; rows < n; rows++) {
       for(int columns = 0; columns < n; columns++) {
-        newGrid[rows][columns] = '0';
+        newGrid[rows][columns] = 0;
       }
     }
   }
@@ -28,7 +28,7 @@ public class Grid {
 
   //Return true if the designated cell is not empty
   public Boolean isSet(int row, int col) {
-    if(newGrid[row][col] != '0') {
+    if(newGrid[row][col] != 0) {
       return(true);
     }
     else {
@@ -40,7 +40,7 @@ public class Grid {
   public void clear() {
     for(int rows = 0; rows < n; rows++) {
       for(int columns = 0; columns < n; columns++) {
-        newGrid[rows][columns] = '0';
+        newGrid[rows][columns] = 0;
       }
     }
   }
