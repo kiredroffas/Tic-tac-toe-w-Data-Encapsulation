@@ -105,7 +105,7 @@ public class TicTacToe extends GridGame {
       }
       else {  //Else we can enter the value into the grid
         g.setCell(row, col, 1);
-        System.out.println("Set coordinate [" + row + ", " + col + "] as " + 1);
+        System.out.println("Set coordinate [" + row + ", " + col + "] as X");
         return (true);
       }
     }
@@ -120,7 +120,7 @@ public class TicTacToe extends GridGame {
       }
       else {
         g.setCell(row, col, 2);
-        System.out.println("Set coordinate [" + row + ", " + col + "] as " + 2);
+        System.out.println("Set coordinate [" + row + ", " + col + "] as O");
         return (true);
       }
     }
@@ -139,7 +139,14 @@ public class TicTacToe extends GridGame {
 
       if (g.getCell(x, y) == 0) {   //Check if spot is empty
         g.setCell(x, y, player);  //Mark the spot
-        System.out.println(", placing " + player + " at [" + x + ", " + y + "]");
+        char c;
+        if(player == 1) {
+          c = 'X';
+        }
+        else {
+          c = 'O';
+        }
+        System.out.println(", placing " + c + " at [" + x + ", " + y + "]");
         return;
       }
     }
@@ -147,12 +154,127 @@ public class TicTacToe extends GridGame {
 
   //Print the tic-tac-toe board
   public void printGrid() {
-    for(int i = 0; i < 3; i++) {
+    int spot0 = g.getCell(0,0);
+    int spot1 = g.getCell(0,1);
+    int spot2 = g.getCell(0,2);
+    int spot3 = g.getCell(1,0);
+    int spot4 = g.getCell(1,1);
+    int spot5 = g.getCell(1,2);
+    int spot6 = g.getCell(2,0);
+    int spot7 = g.getCell(2,1);
+    int spot8 = g.getCell(2,2);
+
+    if(spot0 == 0) {
+      System.out.print(" ");
+    }
+    else if(spot0 == 1){
+        System.out.print("X");
+    }
+    else {
+        System.out.print("O");
+    }
+
+    System.out.print(" | ");
+
+    if(spot1 == 0) {
+      System.out.print(" ");
+    }
+    else if(spot1 == 1){
+      System.out.print("X");
+    }
+    else {
+      System.out.print("O");
+    }
+
+    System.out.print(" | ");
+
+    if(spot2 == 0) {
+      System.out.println(" ");
+    }
+    else if(spot2 == 1){
+      System.out.println("X");
+    }
+    else {
+      System.out.println("O");
+    }
+
+    System.out.println("--+---+--");
+
+    if(spot3 == 0) {
+      System.out.print(" ");
+    }
+    else if(spot3 == 1){
+      System.out.print("X");
+    }
+    else {
+      System.out.print("O");
+    }
+
+    System.out.print(" | ");
+
+    if(spot4 == 0) {
+      System.out.print(" ");
+    }
+    else if(spot4 == 1){
+      System.out.print("X");
+    }
+    else {
+      System.out.print("O");
+    }
+
+    System.out.print(" | ");
+
+    if(spot5 == 0) {
+      System.out.println(" ");
+    }
+    else if(spot5 == 1){
+      System.out.println("X");
+    }
+    else {
+      System.out.println("O");
+    }
+
+    System.out.println("--+---+--");
+
+    if(spot6 == 0) {
+      System.out.print(" ");
+    }
+    else if(spot6 == 1){
+      System.out.print("X");
+    }
+    else {
+      System.out.print("O");
+    }
+
+    System.out.print(" | ");
+
+    if(spot7 == 0) {
+      System.out.print(" ");
+    }
+    else if(spot7 == 1){
+      System.out.print("X");
+    }
+    else {
+      System.out.print("O");
+    }
+
+    System.out.print(" | ");
+
+    if(spot8 == 0) {
+      System.out.println(" ");
+    }
+    else if(spot8 == 1){
+      System.out.println("X");
+    }
+    else {
+      System.out.println("O");
+    }
+    /*for(int i = 0; i < 3; i++) {
       for(int j = 0; j < 3; j++) {
         System.out.print(g.getCell(i,j) + "  ");
       }
       System.out.println();
-    }
+    }*/
   }
 
   //Clear the board to start a new game
