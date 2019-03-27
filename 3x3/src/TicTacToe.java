@@ -79,9 +79,9 @@ public class TicTacToe extends GridGame {
       winStatus = 2;
     }
     //Tie
-    else if(g.getCell(0, 0) != 0 && g.getCell(0, 1) != 0 && g.getCell(0, 2) != 0 &&
-        g.getCell(1, 0) != 0 && g.getCell(1, 1) != 0 && g.getCell(1, 2) != 0 &&
-        g.getCell(2, 0) != 0 && g.getCell(2, 1) != 0 && g.getCell(2, 2) != 0 ) {
+    else if(g.isSet(0, 0) == true && g.isSet(0, 1) == true && g.isSet(0, 2) == true &&
+        g.isSet(1, 0) == true && g.isSet(1, 1) == true && g.isSet(1, 2) == true &&
+        g.isSet(2, 0) == true && g.isSet(2, 1) == true && g.isSet(2, 2) == true ) {
       winStatus = 3;
     }
     //Game in progress

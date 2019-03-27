@@ -32,7 +32,8 @@ public class PlayTTT {
           if (input.charAt(0) == 'p' && input.charAt(1) == 'm') {  //If user wants to have a move made for them
             System.out.print("User makes a move");
             newGame.placeMark(1);
-          } else {  //Else get the coordinates they want to place the mark at
+          }
+          else {  //Else get the coordinates they want to place the mark at
             xcoord = Character.getNumericValue(input.charAt(0));
             ycoord = Character.getNumericValue(input.charAt(2));
 
@@ -47,7 +48,8 @@ public class PlayTTT {
           }
           newGame.printGrid();
           token = 2;
-        } else if (token == 2) { //Computer turn
+        }
+        else if (token == 2) { //Computer turn
           System.out.print("Computer makes its move");
           newGame.placeMark(2);
           newGame.printGrid();
@@ -58,9 +60,11 @@ public class PlayTTT {
       //Check for win conditions
       if (newGame.getStatus() == 1) {
         System.out.println("User wins!");
-      } else if (newGame.getStatus() == 2) {
+      }
+      else if (newGame.getStatus() == 2) {
         System.out.println("Computer wins!");
-      } else {
+      }
+      else {
         System.out.println("Its a tie!");
       }
 
