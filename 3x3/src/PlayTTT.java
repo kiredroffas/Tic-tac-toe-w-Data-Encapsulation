@@ -13,7 +13,7 @@ public class PlayTTT {
 
     while(cont == 0) {
       //Find out if user wants to go first
-      System.out.println("Welcome to Tic-Tac-Toe, would you like to go first? y/n");
+      System.out.println("Welcome to 3x3 Tic-Tac-Toe, try to get 3 in a row! Would you like to go first? y/n");
       String yn = sc.nextLine();
       if (yn.charAt(0) == 'y') {
         token = 1;

@@ -164,6 +164,8 @@ public class TicTacToe extends GridGame {
     int spot7 = g.getCell(2,1);
     int spot8 = g.getCell(2,2);
 
+    System.out.println("   0   1   2");
+    System.out.print("0  ");
     if(spot0 == 0) {
       System.out.print(" ");
     }
@@ -198,7 +200,8 @@ public class TicTacToe extends GridGame {
       System.out.println("O");
     }
 
-    System.out.println("--+---+--");
+    System.out.println("   --+---+--");
+    System.out.print("1  ");
 
     if(spot3 == 0) {
       System.out.print(" ");
@@ -234,7 +237,8 @@ public class TicTacToe extends GridGame {
       System.out.println("O");
     }
 
-    System.out.println("--+---+--");
+    System.out.println("   --+---+--");
+    System.out.print("2  ");
 
     if(spot6 == 0) {
       System.out.print(" ");
