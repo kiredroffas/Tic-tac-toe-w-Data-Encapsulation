@@ -268,8 +268,8 @@ public class TicTacToe extends GridGame {
   public void placeMark(int player) {
     while(true) {
       Random rand = new Random();
-      int x = rand.nextInt(4);  //Get a value between 0-2 for x-coord
-      int y = rand.nextInt(4);  //Get a value between 0-2 for y-coord
+      int x = rand.nextInt(4);  //Get a value between 0-3 for x-coord
+      int y = rand.nextInt(4);  //Get a value between 0-3 for y-coord
 
       if (g.getCell(x, y) == 0) {   //Check if spot is empty
         g.setCell(x, y, player);  //Mark the spot
