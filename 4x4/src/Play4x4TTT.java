@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PlayTTT {
+public class Play4x4TTT {
 
   public static void main(String[] args) {
     TicTacToe newGame = new TicTacToe();  //Make a new tic-tac-toe game
