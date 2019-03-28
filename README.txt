@@ -1,16 +1,16 @@
 Erik Safford
 OOP - Tictactoe in Java
-CS 355 - Spring 2019
+Spring 2019
                                                             
 To run 3x3 Tic-Tac-Toe use the following classes in Java Source Code->3x3 Tictactoe:  Grid
                                                                                       GridGame
-																				(main)Play3x3TTT
-																					  TicTacToe
+										      (main)Play3x3TTT
+										      TicTacToe
 																					  
 To run 4x4 Tic-Tac-Toe use the following classes in Java Source Code->4x4 Tictactoe:  Grid
                                                                                       GridGame
-																				(main)Play4x4TTT
-																					  TicTacToe
+										      (main)Play4x4TTT
+										      TicTacToe
 
 Rules for 3x3 Tic-Tac-Toe: Its just normal tic-tac-toe.
 
